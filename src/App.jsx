@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
 import LoginPage from './pages/LoginPage';
+import ProjectCreate from './pages/ProjectCreate';
 
 const HeaderLayout= () => {
   return (
@@ -22,16 +23,20 @@ const router = createBrowserRouter([
     element: <HeaderLayout/>,
     children:[
       {
-        path: '/',
-        element: <HomePage/>,
-      },
-      {
         path:'/project/:id',
         element: <ProjectPage/>,
       },
       {
-        path:'/Login',
+        path:'/login',
         element: <LoginPage/>,
+      },
+      {
+        path: '/',
+        element: <HomePage/>,
+      },
+      {
+        path: '/projectCreate',
+        element: <ProjectCreate/>,
       }
     ]
   }
@@ -45,4 +50,4 @@ function App() {
   )
 };
 
-export default App
+export default App;
